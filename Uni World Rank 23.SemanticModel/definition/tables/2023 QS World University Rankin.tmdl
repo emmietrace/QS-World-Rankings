@@ -1,0 +1,288 @@
+table '2023 QS World University Rankin'
+	lineageTag: 9d1253e5-ff25-4424-9a9a-1919b3dd2ae9
+
+	measure 'Top University' = CALCULATE(MAX('2023 QS World University Rankin (2)'[institution]), '2023 QS World University Rankin (2)'[Rank]= 1)
+		lineageTag: c5981b16-e2d8-467f-8c23-e2ba8528e237
+
+	measure 'Top Score' = CALCULATE(MAX('2023 QS World University Rankin (2)'[Scaled Overall Score]), '2023 QS World University Rankin (2)'[Rank]= 1)
+		lineageTag: 173a8716-3334-4839-95bc-c706beeb9858
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Max Academic Rep' = MAX('2023 QS World University Rankin (2)'[Academic Reputation Score])
+		lineageTag: b0ff3cdc-5a2d-43a2-a7f6-7142f0154657
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Targett = 100
+		formatString: 0
+		lineageTag: 40ba6546-4b1d-40c6-b993-edda5c94e51e
+
+	measure 'Location with Others'
+		lineageTag: 4beee6fa-c1e2-4581-8a12-99f8dfe494c7
+
+	measure 'Most Represented Country' = ```
+			
+			VAR TopCountry = 
+			    CALCULATE(
+			        MAX('2023 QS World University Rankin (2)'[location]), 
+			        FILTER('2023 QS World University Rankin (2)', 
+			            CALCULATE(COUNT('2023 QS World University Rankin (2)'[institution])) = 
+			            MAXX(ALL('2023 QS World University Rankin (2)'[location]), CALCULATE(COUNT('2023 QS World University Rankin (2)'[institution])))
+			        )
+			    )
+			RETURN TopCountry
+			```
+		lineageTag: 1e4fb642-4529-405b-962b-770db094dfa5
+
+	measure 'Avg Score Most Represented' = ```
+			
+			CALCULATE(
+			    AVERAGE('2023 QS World University Rankin (2)'[Scaled Overall Score]), 
+			    '2023 QS World University Rankin (2)'[location] = [Most Represented Country]
+			)
+			```
+		lineageTag: 357a9721-172e-4381-8b9c-68c7c90268af
+
+	measure 'Country Highest Avg Score' = ```
+			
+			VAR TopCountry = 
+			    CALCULATE(
+			        MAX('2023 QS World University Rankin (2)'[location]), 
+			        FILTER('2023 QS World University Rankin (2)', 
+			            CALCULATE(AVERAGE('2023 QS World University Rankin (2)'[Scaled Overall Score])) = 
+			            MAXX(ALL('2023 QS World University Rankin (2)'[location]), CALCULATE(AVERAGE('2023 QS World University Rankin (2)'[Scaled Overall Score])))
+			        )
+			    )
+			RETURN TopCountry
+			```
+		lineageTag: 29583971-0baa-43fa-85d2-3633bb7f13eb
+
+	measure 'Top 5 Institutions' =
+			
+			IF(
+			    ISFILTERED('2023 QS World University Rankin (2)'[institution]),
+			        CALCULATE(
+			        MAX('2023 QS World University Rankin (2)'[institution]),
+			        TOPN(5, '2023 QS World University Rankin (2)', '2023 QS World University Rankin (2)'[Scaled Overall Score], DESC)
+			    )
+			)
+		lineageTag: 9d696605-90fe-466d-b170-bbe9acc7ac32
+
+	column Rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 65c5f113-05f8-4b98-b0ef-29260434621c
+		summarizeBy: sum
+		sourceColumn: Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column institution
+		dataType: string
+		lineageTag: ad07e96f-0fb6-43e1-92ca-e1f0b6e3bf86
+		summarizeBy: none
+		sourceColumn: institution
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Students'
+		dataType: int64
+		formatString: 0
+		lineageTag: 78fb7e50-8220-488e-951d-f724e8d3f1eb
+		summarizeBy: sum
+		sourceColumn: Total Students
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'location code'
+		dataType: string
+		lineageTag: 45b9c599-1ab9-4197-a46f-288b60d2796d
+		summarizeBy: none
+		sourceColumn: location code
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 94159e32-c0a7-4ee4-8080-79221a98bec3
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Academic Reputation Score'
+		dataType: double
+		lineageTag: 47db588a-f2bc-47e1-9bfe-7c68c852a402
+		summarizeBy: sum
+		sourceColumn: Academic Reputation Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Academic Reputation Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bc2ff18-91c8-4fab-876d-0abfb898e2f7
+		summarizeBy: sum
+		sourceColumn: Academic Reputation Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employer Reputation Ran'
+		dataType: double
+		lineageTag: 716bfc41-e232-4b3f-aeea-1c0d5aca693c
+		summarizeBy: sum
+		sourceColumn: Employer Reputation Ran
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Employer Reputation Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a374e77-7f53-4530-9078-189c24b547ec
+		summarizeBy: sum
+		sourceColumn: Employer Reputation Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Faculty-Student Ratio Score'
+		dataType: double
+		lineageTag: 78b8f28a-b4d2-4e51-92d7-093478957f0b
+		summarizeBy: sum
+		sourceColumn: Faculty-Student Ratio Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Faculty-Student Ratio Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: edbd7577-5dee-49ab-b0d9-c0b34c8e2637
+		summarizeBy: sum
+		sourceColumn: Faculty-Student Ratio Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Citations per Faculty Score'
+		dataType: double
+		lineageTag: 8ad46778-9d1c-4bcb-a8e4-e2dbdb7a5849
+		summarizeBy: sum
+		sourceColumn: Citations per Faculty Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Citations per Faculty Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: c741a523-0f94-4bb0-aa21-5c8877a9c550
+		summarizeBy: sum
+		sourceColumn: Citations per Faculty Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'International Faculty Ratio Score'
+		dataType: double
+		lineageTag: 233ca3e9-697c-4bbd-8fc8-914753452bb4
+		summarizeBy: sum
+		sourceColumn: International Faculty Ratio Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'International Faculty Ratio Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: 220555d0-8384-48e9-84e0-c6195a69d6c1
+		summarizeBy: sum
+		sourceColumn: International Faculty Ratio Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'International Student Ratio Score'
+		dataType: double
+		lineageTag: e16045a6-c64a-40c1-80a5-60b0b8e9c42c
+		summarizeBy: sum
+		sourceColumn: International Student Ratio Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'International Student Ratio Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: 883555e6-b657-456c-8694-edd9d5c0698c
+		summarizeBy: sum
+		sourceColumn: International Student Ratio Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'International Research Network Score'
+		dataType: double
+		lineageTag: c2119867-46ff-45e1-9c02-bfce026d7523
+		summarizeBy: sum
+		sourceColumn: International Research Network Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'International Research Network Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: c06dda58-84f9-463b-95fb-8b21b9419f3f
+		summarizeBy: sum
+		sourceColumn: International Research Network Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Graduate Employability Ratio Score'
+		dataType: double
+		lineageTag: a3f06217-55c0-4588-9ec1-943cbb564d4d
+		summarizeBy: sum
+		sourceColumn: Graduate Employability Ratio Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Graduate Employability Ratio Rank'
+		dataType: int64
+		formatString: 0
+		lineageTag: df934e3b-f5cc-445d-8f10-bfc856b5c327
+		summarizeBy: sum
+		sourceColumn: Graduate Employability Ratio Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scaled Overall Score'
+		dataType: double
+		lineageTag: b32e78bb-151b-4661-9b32-a4426550b9f1
+		summarizeBy: sum
+		sourceColumn: Scaled Overall Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition '2023 QS World University Rankin' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Emmanuel Okolo\Downloads\2023 QS World University Rankings.xlsx"), null, true),
+				    #"2023 QS World University Rankin_Sheet" = Source{[Item="2023 QS World University Rankin",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"2023 QS World University Rankin_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Rank", Int64.Type}, {"institution", type text}, {"Total Students", Int64.Type}, {"location code", type text}, {"location", type text}, {"Academic Reputation Score", type number}, {"Academic Reputation Rank", Int64.Type}, {"Employer Reputation Ran", type number}, {"Employer Reputation Rank", Int64.Type}, {"Faculty-Student Ratio Score", type number}, {"Faculty-Student Ratio Rank", Int64.Type}, {"Citations per Faculty Score", type number}, {"Citations per Faculty Rank", Int64.Type}, {"International Faculty Ratio Score", type number}, {"International Faculty Ratio Rank", Int64.Type}, {"International Student Ratio Score", type number}, {"International Student Ratio Rank", Int64.Type}, {"International Research Network Score", type number}, {"International Research Network Rank", Int64.Type}, {"Graduate Employability Ratio Score", type number}, {"Graduate Employability Ratio Rank", Int64.Type}, {"Scaled Overall Score", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

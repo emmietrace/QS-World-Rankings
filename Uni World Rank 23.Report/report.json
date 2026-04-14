@@ -1,0 +1,309 @@
+{
+  "config": "{\"version\":\"5.65\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":\"5.59\"}},\"activeSectionIndex\":5,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true,\"filterPaneHiddenInEditMode\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Table, Location Code Slicer",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "0319e131ab0f1de2bb96",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1fbc0f6744df762ef1b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.location code\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location code\"},\"Name\":\"2023 QS World University Rankin.location code\",\"NativeReferenceName\":\"location code\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 280.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9160a48410e09a848244\",\"layouts\":[{\"id\":0,\"position\":{\"x\":256.13239926653813,\"y\":492.7547134326955,\"z\":3000,\"width\":171.3968686821195,\"height\":227.2452865673045,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.institution\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin.institution\",\"NativeReferenceName\":\"institution\"}]},\"syncGroup\":{\"groupName\":\"institution\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 227.25,
+          "width": 171.40,
+          "x": 256.13,
+          "y": 492.75,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"92840e94e6cf7632569c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":372.286327250917,\"z\":2000,\"width\":1048.82696255969,\"height\":279.68719001591734,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"2023 QS World University Rankin.institution\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(2023 QS World University Rankin.Academic Reputation Score)\"},{\"queryRef\":\"Sum(2023 QS World University Rankin.Employer Reputation Rank)\"},{\"queryRef\":\"Sum(2023 QS World University Rankin.Graduate Employability Ratio Score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin.institution\",\"NativeReferenceName\":\"institution\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Academic Reputation Score\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Academic Reputation Score)\",\"NativeReferenceName\":\"Sum of Academic Reputation Score\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Employer Reputation Rank\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Employer Reputation Rank)\",\"NativeReferenceName\":\"Sum of Employer Reputation Rank\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Graduate Employability Ratio Score\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Graduate Employability Ratio Score)\",\"NativeReferenceName\":\"Sum of Graduate Employability Ratio Score\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"institution\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0},{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Scaled Overall Score\"}},\"Function\":0}}}],\"Top\":10}}},\"Type\":2}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 279.69,
+          "width": 1048.83,
+          "x": 9.45,
+          "y": 372.29,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"aec825f11e72679bb62b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":589.6108330065284,\"y\":28.346674663775406,\"z\":1000,\"width\":572.6028282082632,\"height\":343.9396525871416,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"2023 QS World University Rankin.institution\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(2023 QS World University Rankin.Academic Reputation Score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin.institution\",\"NativeReferenceName\":\"institution\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Academic Reputation Score\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Academic Reputation Score)\",\"NativeReferenceName\":\"Sum of Academic Reputation Score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Academic Reputation Score\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"institution\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0},{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2}}}],\"Top\":5}}},\"Type\":2}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 343.94,
+          "width": 572.60,
+          "x": 589.61,
+          "y": 28.35,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Cards and Slicers",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "0c70e249108f6bea0781",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"05a4dcec79e5f6eed5fe\",\"layouts\":[{\"id\":0,\"position\":{\"x\":356.6666666666667,\"y\":171.66666666666669,\"z\":1000,\"width\":566.6666666666667,\"height\":171.66666666666669,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"2023 QS World University Rankin.Top University\"},{\"queryRef\":\"2023 QS World University Rankin.Top Score\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Top University\"},\"Name\":\"2023 QS World University Rankin.Top University\",\"NativeReferenceName\":\"Top University\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Top Score\"},\"Name\":\"2023 QS World University Rankin.Top Score\",\"NativeReferenceName\":\"Top Score\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Top University\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"80530d6df2fe818a6252\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"Rank\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"requireSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 171.67,
+          "width": 566.67,
+          "x": 356.67,
+          "y": 171.67,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"bfffe3e0b47d2f1c0a90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":270.8757597860442,\"y\":491.95818137612446,\"z\":4000,\"width\":171.2890833941162,\"height\":227.05762217359592,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.institution\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin.institution\",\"NativeReferenceName\":\"institution\"}]},\"syncGroup\":{\"groupName\":\"institution\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 227.06,
+          "width": 171.29,
+          "x": 270.88,
+          "y": 491.96,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"cde8f74fad6cd0c50884\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":0,\"z\":0,\"width\":1007.2518397194862,\"height\":171.9698262935708,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Min(2023 QS World University Rankin (2).institution)\"},{\"queryRef\":\"Sum(2023 QS World University Rankin (2).Total Students)\"},{\"queryRef\":\"Sum(2023 QS World University Rankin (2).Scaled Overall Score)\"},{\"queryRef\":\"Avg(2023 QS World University Rankin (2).Total Students)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2},\"Name\":\"Min(2023 QS World University Rankin (2).institution)\",\"NativeReferenceName\":\"Count of institution\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Total Students\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin (2).Total Students)\",\"NativeReferenceName\":\"Sum of Total Students\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Scaled Overall Score\"}},\"Function\":1},\"Name\":\"Sum(2023 QS World University Rankin (2).Scaled Overall Score)\",\"NativeReferenceName\":\"Average of Scaled Overall Score\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Total Students\"}},\"Function\":1},\"Name\":\"Avg(2023 QS World University Rankin (2).Total Students)\",\"NativeReferenceName\":\"Average of Total Students\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"8L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 171.97,
+          "width": 1007.25,
+          "x": 9.45,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f90a2524baf8de9d0870\",\"layouts\":[{\"id\":0,\"position\":{\"x\":539.203036053131,\"y\":435.57242251739405,\"z\":3000,\"width\":299.5572422517394,\"height\":241.26502213788743,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.location\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"}]},\"syncGroup\":{\"groupName\":\"location\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Australia'\"}}]]}}}]}}}}],\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 241.27,
+          "width": 299.56,
+          "x": 539.20,
+          "y": 435.57,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Map, Donut Chart, KPI",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "a83f9c73be50765ad461",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"21d9167d19d41e29b19d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":570.7130498973448,\"y\":0,\"z\":2000,\"width\":708.6668665943852,\"height\":576.3823848300999,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(2023 QS World University Rankin.institution)\"}],\"Category\":[{\"queryRef\":\"2023 QS World University Rankin.location\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":5},\"Name\":\"CountNonNull(2023 QS World University Rankin.institution)\",\"NativeReferenceName\":\"Count of institution\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0},{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2}}}],\"Top\":10}}},\"Type\":2}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 576.38,
+          "width": 708.67,
+          "x": 570.71,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"979924d000e0ce8383d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.715370018975332,\"y\":0,\"z\":0,\"width\":417.76091081593927,\"height\":254.21884882985452,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"kpi\",\"projections\":{\"Goal\":[{\"queryRef\":\"2023 QS World University Rankin.Targett\"}],\"Indicator\":[{\"queryRef\":\"2023 QS World University Rankin.Max Academic Rep\"}],\"TrendLine\":[{\"queryRef\":\"2023 QS World University Rankin.Academic Reputation Score\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Targett\"},\"Name\":\"2023 QS World University Rankin.Targett\",\"NativeReferenceName\":\"Targett\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Max Academic Rep\"},\"Name\":\"2023 QS World University Rankin.Max Academic Rep\",\"NativeReferenceName\":\"Max Academic Rep\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Academic Reputation Score\"},\"Name\":\"2023 QS World University Rankin.Academic Reputation Score\",\"NativeReferenceName\":\"Academic Reputation Score\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 254.22,
+          "width": 417.76,
+          "x": 9.72,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"be07840f804f57390927\",\"layouts\":[{\"id\":0,\"position\":{\"x\":256.13239926653813,\"y\":492.7547134326955,\"z\":3000,\"width\":171.3968686821195,\"height\":227.2452865673045,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.institution\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin.institution\",\"NativeReferenceName\":\"institution\"}]},\"syncGroup\":{\"groupName\":\"institution\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 227.25,
+          "width": 171.40,
+          "x": 256.13,
+          "y": 492.75,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"eba5193463ce5d2bf603\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":289.13608157050913,\"z\":1000,\"width\":582.051719762855,\"height\":413.86145009112096,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"2023 QS World University Rankin.location\",\"active\":true}],\"Size\":[{\"queryRef\":\"CountNonNull(2023 QS World University Rankin.institution)\"}],\"Tooltips\":[{\"queryRef\":\"Sum(2023 QS World University Rankin.Total Students)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2},\"Name\":\"CountNonNull(2023 QS World University Rankin.institution)\",\"NativeReferenceName\":\"Count of institution\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Total Students\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Total Students)\",\"NativeReferenceName\":\"Sum of Total Students\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 413.86,
+          "width": 582.05,
+          "x": 9.45,
+          "y": 289.14,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Dashboard",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"c140e3b5af851071b0b5\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"institution\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "ca64713057c4e1e669b2",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"00f4dbb5a0f949f3c946\",\"layouts\":[{\"id\":0,\"position\":{\"x\":646.0721062618596,\"y\":466.337760910816,\"z\":1000,\"width\":634.7375079063884,\"height\":254.21884882985452,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(2023 QS World University Rankin.institution)\"}],\"Category\":[{\"queryRef\":\"2023 QS World University Rankin.location\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":5},\"Name\":\"CountNonNull(2023 QS World University Rankin.institution)\",\"NativeReferenceName\":\"No. of institutions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(2023 QS World University Rankin.institution)\":{\"displayName\":\"No. of institutions\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10.5D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'United States'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'United Kingdom'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.2}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'China (Mainland)'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'Japan'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'Russia'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.6}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'Germany'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0.6}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'India'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0.2}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'Italy'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.2}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'South Korea'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'Australia'\"}}}}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.1}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0},{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2}}}],\"Top\":10}}},\"Type\":2}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 254.22,
+          "width": 634.74,
+          "x": 646.07,
+          "y": 466.34,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"309ced688fc308adf081\",\"layouts\":[{\"id\":0,\"position\":{\"x\":646.0721062618596,\"y\":137.63440860215053,\"z\":2000,\"width\":634.7375079063884,\"height\":328.7033523086654,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"2023 QS World University Rankin.location\",\"active\":true}],\"Size\":[{\"queryRef\":\"CountNonNull(2023 QS World University Rankin.institution)\"}],\"Tooltips\":[{\"queryRef\":\"Sum(2023 QS World University Rankin.Total Students)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2},\"Name\":\"CountNonNull(2023 QS World University Rankin.institution)\",\"NativeReferenceName\":\"Count of institution\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Total Students\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Total Students)\",\"NativeReferenceName\":\"Sum of Total Students\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'grayscale'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}}}}],\"mapControls\":[{\"properties\":{\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#b3b3b3'\"}}}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'No. of institution and Total Students by location'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 328.70,
+          "width": 634.74,
+          "x": 646.07,
+          "y": 137.63,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"78b664b4bc035cf36364\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":137.63440860215053,\"z\":0,\"width\":646.0721062618596,\"height\":328.7033523086654,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Series\":[{\"queryRef\":\"2023 QS World University Rankin (2).location\"}],\"Y\":[{\"queryRef\":\"Sum(2023 QS World University Rankin (2).Scaled Overall Score)\"}],\"Category\":[{\"queryRef\":\"2023 QS World University Rankin (2).institution\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin (2).location\",\"NativeReferenceName\":\"location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Scaled Overall Score\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin (2).Scaled Overall Score)\",\"NativeReferenceName\":\"Sum of Scaled Overall Score\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin (2).institution\",\"NativeReferenceName\":\"institution\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Scaled Overall Score\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}},\"switchAxisPosition\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"legend\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin (2)\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'Switzerland'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin (2)\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'United Kingdom'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":-0.5}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin (2)\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'United States'\"}}}}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Scaled Overall Score by institution and location'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.1}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}]}}}",
+          "filters": "[{\"name\":\"66d20fd4b08b9f9f92dc\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin (2)\"}},\"Property\":\"Rank\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin (2)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":4,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Rank\"}},\"Right\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 328.70,
+          "width": 646.07,
+          "x": 0.00,
+          "y": 137.63,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9ab56e390808cefcfdbe\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":4000,\"width\":1280.809614168248,\"height\":137.63440860215053,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Min(2023 QS World University Rankin.institution)\"},{\"queryRef\":\"Sum(2023 QS World University Rankin.Total Students)\"},{\"queryRef\":\"Min(2023 QS World University Rankin.location)\"},{\"queryRef\":\"Sum(2023 QS World University Rankin.Scaled Overall Score)\"},{\"queryRef\":\"Avg(2023 QS World University Rankin.Total Students)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Total Students\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Total Students)\",\"NativeReferenceName\":\"Sum of Total Students\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}},\"Function\":2},\"Name\":\"Min(2023 QS World University Rankin.location)\",\"NativeReferenceName\":\"Count of location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2},\"Name\":\"Min(2023 QS World University Rankin.institution)\",\"NativeReferenceName\":\"No. of institutions\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Scaled Overall Score\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Scaled Overall Score)\",\"NativeReferenceName\":\"Avg of Scaled Overall Score\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Total Students\"}},\"Function\":1},\"Name\":\"Avg(2023 QS World University Rankin.Total Students)\",\"NativeReferenceName\":\"Avg No. Of Students\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2}}}]},\"columnProperties\":{\"Min(2023 QS World University Rankin.institution)\":{\"displayName\":\"No. of institutions\"},\"Sum(2023 QS World University Rankin.Scaled Overall Score)\":{\"displayName\":\"Avg of Scaled Overall Score\"},\"Avg(2023 QS World University Rankin.Total Students)\":{\"displayName\":\"Avg No. Of Students\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"7L\"}}},\"cellPadding\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}},{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundFillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"47D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'wf_standard-font_light, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"shapeCustomRectangle\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRoundedByPixel'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"15L\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#b3b3b3'\"}}}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 137.63,
+          "width": 1280.81,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f6477e89068d1c3c03e3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":466.337760910816,\"z\":3000,\"width\":646.0721062618596,\"height\":254.21884882985452,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.location\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bahrain'\"}}]]}}}]}}}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}}},\"selector\":{\"id\":\"default\"}}],\"shapeCustomRectangle\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRoundedByPixel'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"12L\"}}},\"rectangleRoundedCurveCustomStyle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#b3b3b3'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 254.22,
+          "width": 646.07,
+          "x": 0.00,
+          "y": 466.34,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Avg of Scaled Overall Score by Location",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "e13a3efce5761b9a3f2f",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3822e36da4f9f1ea95b4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":249.4507370412236,\"y\":400.6330019146924,\"z\":2000,\"width\":285.3565249486724,\"height\":240.00184548663177,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"2023 QS World University Rankin.Country Highest Avg Score\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Country Highest Avg Score\"},\"Name\":\"2023 QS World University Rankin.Country Highest Avg Score\",\"NativeReferenceName\":\"Country Highest Avg Score\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 285.36,
+          "x": 249.45,
+          "y": 400.63,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"568bdd0b529974701b16\",\"layouts\":[{\"id\":0,\"position\":{\"x\":935.4402639045884,\"y\":35.90578790744885,\"z\":3000,\"width\":171.9698262935708,\"height\":323.15209116703966,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.institution\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin.institution\",\"NativeReferenceName\":\"institution\"}]},\"syncGroup\":{\"groupName\":\"institution\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 323.15,
+          "width": 171.97,
+          "x": 935.44,
+          "y": 35.91,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5b410c902a668da335ec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":400.6330019146924,\"z\":1000,\"width\":240.00184548663177,\"height\":240.00184548663177,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"2023 QS World University Rankin.Most Represented Country\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Most Represented Country\"},\"Name\":\"2023 QS World University Rankin.Most Represented Country\",\"NativeReferenceName\":\"Most Represented Country\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Most Represented Country\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 240.00,
+          "x": 9.45,
+          "y": 400.63,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"69f55d87e3410a2be94d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":0,\"z\":0,\"width\":697.328196728875,\"height\":391.1841103601006,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"2023 QS World University Rankin.location\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(2023 QS World University Rankin.Scaled Overall Score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Scaled Overall Score\"}},\"Function\":1},\"Name\":\"Sum(2023 QS World University Rankin.Scaled Overall Score)\",\"NativeReferenceName\":\"Average of Scaled Overall Score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Scaled Overall Score\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0},{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"}},\"Function\":2}}}],\"Top\":10}}},\"Type\":2}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 391.18,
+          "width": 697.33,
+          "x": 9.45,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8e1d590eebe0b490ccd3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":534.807261989896,\"y\":400.6330019146924,\"z\":4000,\"width\":298.58497312510093,\"height\":240.00184548663177,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.location\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"}]},\"syncGroup\":{\"groupName\":\"location\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Australia'\"}}]]}}}]}}}}],\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 298.58,
+          "x": 534.81,
+          "y": 400.63,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Pie Chart of GER by Location(Top 10)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ee9352abde2f9337b97c",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0b34182ca96c4b7042d5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":298.58497312510093,\"y\":85.04002399132622,\"z\":0,\"width\":623.6268426030589,\"height\":634.9655124685692,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"2023 QS World University Rankin.location\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(2023 QS World University Rankin.Graduate Employability Ratio Score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"2023 QS World University Rankin.location\",\"NativeReferenceName\":\"location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Graduate Employability Ratio Score\"}},\"Function\":0},\"Name\":\"Sum(2023 QS World University Rankin.Graduate Employability Ratio Score)\",\"NativeReferenceName\":\"Sum of Graduate Employability Ratio Score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Graduate Employability Ratio Score\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"2023 QS World University Rankin\"}},\"Property\":\"location\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0},{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"Graduate Employability Ratio Score\"}},\"Function\":0}}}],\"Top\":10}}},\"Type\":2}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"location\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 634.97,
+          "width": 623.63,
+          "x": 298.58,
+          "y": 85.04,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"20f21ecd285c73cbc16e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":256.13239926653813,\"y\":492.7547134326955,\"z\":1000,\"width\":171.3968686821195,\"height\":227.2452865673045,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"2023 QS World University Rankin.institution\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023 QS World University Rankin\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"institution\"},\"Name\":\"2023 QS World University Rankin.institution\",\"NativeReferenceName\":\"institution\"}]},\"syncGroup\":{\"groupName\":\"institution\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 227.25,
+          "width": 171.40,
+          "x": 256.13,
+          "y": 492.75,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

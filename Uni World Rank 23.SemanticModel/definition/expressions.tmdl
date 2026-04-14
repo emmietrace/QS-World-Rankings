@@ -1,0 +1,24 @@
+expression 'Errors in 2023 QS World University Rankin' =
+		let
+		Source = #"2023 QS World University Rankin",
+		  #"Detected Type Mismatches" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "The type of the value does not match the type of the column.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Source, pairs),
+		  #"Added Index" = Table.AddIndexColumn(#"Detected Type Mismatches", "Row Number" ,1),
+		  #"Kept Errors" = Table.SelectRowsWithErrors(#"Added Index", {"Rank", "institution", "Total Students", "location code", "location", "Academic Reputation Score", "Academic Reputation Rank", "Employer Reputation Ran", "Employer Reputation Rank", "Faculty-Student Ratio Score", "Faculty-Student Ratio Rank", "Citations per Faculty Score", "Citations per Faculty Rank", "International Faculty Ratio Score", "International Faculty Ratio Rank", "International Student Ratio Score", "International Student Ratio Rank", "International Research Network Score", "International Research Network Rank", "Graduate Employability Ratio Score", "Graduate Employability Ratio Rank", "Scaled Overall Score"}),
+		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "Rank", "institution", "Total Students", "location code", "location", "Academic Reputation Score", "Academic Reputation Rank", "Employer Reputation Ran", "Employer Reputation Rank", "Faculty-Student Ratio Score", "Faculty-Student Ratio Rank", "Citations per Faculty Score", "Citations per Faculty Rank", "International Faculty Ratio Score", "International Faculty Ratio Rank", "International Student Ratio Score", "International Student Ratio Rank", "International Research Network Score", "International Research Network Rank", "Graduate Employability Ratio Score", "Graduate Employability Ratio Rank", "Scaled Overall Score"}),
+		    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Reordered Columns", {"Scaled Overall Score"})
+		in
+		    #"Removed Errors"
+	lineageTag: 7ac07887-8ec8-4297-a23f-150d423d2e51
+	queryGroup: 'Query Errors - 9/24/2025 4:15:13 PM'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

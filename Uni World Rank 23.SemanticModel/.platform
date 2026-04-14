@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Uni World Rank 23"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8eb6ade5-c441-4582-8383-ac578857232c"
+  }
+}
